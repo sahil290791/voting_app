@@ -38,8 +38,8 @@ I add an extra class called `liked` which changes the color of the button.
     <!-- Adding a class liked -->
     <div class="votingBtn margin-top-md">
       <!-- Adding a helper method in posts_helper.rb to determine whether the user has already voted or not -->
-			<%= link_to vote_post_url(@post), class: "btn btn-xs btn-default  #{liked_or_not}", method: 'put', remote: true do %>
-				<i class="fa fa-thumbs-up "></i>
-			<% end %>
-			<span class="voteCount"><%= @post.get_likes.count %></span>
-		</div>
+      <%= link_to vote_post_url(@post), class: "btn btn-xs btn-default  #{liked_or_not}", method: 'put', remote: true do %>
+	<i class="fa fa-thumbs-up "></i>
+      <% end %>
+      <span class="voteCount"><%= @post.get_likes.count %></span>
+     </div>
