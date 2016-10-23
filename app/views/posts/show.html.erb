@@ -1,0 +1,25 @@
+
+<div class="container">
+	<p id="notice"><%= notice %></p>
+
+	<div class="col-lg-12 col-md-12">
+		<div class="h3 text-center">
+		  	<%= @post.title %>
+		</div>
+
+		<div class="text-muted">
+		  	<%= @post.body %>
+		</div>
+
+		<div class="votingBtn margin-top-md">
+			<%= link_to vote_post_url(@post), class: "btn btn-xs btn-default  #{liked_or_not}", method: 'put', remote: true do %>
+				<i class="fa fa-thumbs-up "></i>
+			<% end %>
+			<span class="voteCount"><%= @post.get_likes.count %></span>
+		</div>
+		<div class="margin-top-md">
+			<%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-sm btn-danger' %>
+			<%= link_to 'Back', posts_path, class: 'btn btn-sm btn-info' %>
+		</div>	
+	</div>
+</div>
