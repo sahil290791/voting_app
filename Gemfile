@@ -35,7 +35,10 @@ group :development, :test do
   gem 'byebug', platform: :mri
 end
 
+# Allows us to add voting functionality into our app
 gem 'acts_as_votable', '~> 0.10.0'
+
+# Makes the URLs look more friendlier
 gem 'friendly_id', '~> 5.1.0'
 
 gem 'devise'
